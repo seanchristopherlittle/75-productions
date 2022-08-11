@@ -1,4 +1,4 @@
-//DEFENITELY HAD TO CODE ALONG W/ VIDEO FOR THIS ONE!
+//DEFENITELY HAD TO CODE ALONG W/ VIDEO FOR THIS
 
 // Remove Blanks
 // Create a function that, given a string, returns all of that string’s contents, but without blanks.
