@@ -34,7 +34,30 @@ const LIGHTS = {
 stopLight = (vehicleType, speed, lightColor) => {
   speed = -1;
 
-  // your code here
+  if (vehicleType === VEHICLE_TYPES.bicycle) {
+    if (lightColor !== LIGHTS.green) {
+      speed = 0;
+    }
+  }
+  if (vehicleType === VEHICLE_TYPES.privateVehicle) {
+    if (lightColor === LIGHTS.yellow) {
+      speed = 20;
+    }
+    if (lightColor === LIGHTS.red) {
+      speed = 0;
+    }
+  }
+  if (vehicleType === VEHICLE_TYPES.publicVehicle) {
+    if (lightColor !== LIGHTS.white) speed = 0;
+  }
+  if (vehicleType === VEHICLE_TYPES.emergencyVehicle) {
+    if (lightColor === LIGHTS.white || LIGHTS.yellow) {
+      speed = 30;
+    }
+    if (lightColor === LIGHTS.red) {
+      speed = 20;
+    }
+  }
 
   return speed;
 };
